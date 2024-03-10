@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    
+    <!--Video JS-->
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <main>
+        <h1>Welcome to My Website</h1>  
+    </main> -->
+
+    <div class="landing-page">
+        <div class="title-container">
+            <h1 id="title-start">MOVIE</h1>
+            <h1 id="title-middle">SHOW</h1>
+            <h1 id="title-end">CASE</h1>
+        </div>
+
+        <div class="developed">
+            Developed by Omar Pérez González
+        </div>
+    </div>
+
+    <div class="navbar">
+        <img src="media/img/cinema-film-movie-svgrepo-com.svg" class="navbar-icon">
+
+        <h3 class="navbar-name"><a target="_blank" href="https://www.github.com">Developed by Omar Pérez González</a></h3>
+    </div>
+
+    <div class="movie-container">
+        <video class="movie-element" id="el0" src="media/vid/About Time - London Underground Scene.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el1" src="media/vid/Aftersun (2022) - Under Pressure.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el2" src="media/vid/Atonement - Dunkirk beach scene.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el3" src="media/vid/Babylon (2022) - The Ending Montage Scene | Movieclips.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el4" src="media/vid/Cold War - Clip_ Dancing | Amazon Studios.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el5" src="media/vid/Princess Mononoke | Multi-Audio Clip_ .mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el6" src="media/vid/Watch Your Arms! | The Thing (1982) | Sci-Fi Station.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el7" src="media/vid/The Worst Person In The World | World At Still.mp4" muted>
+        </video>
+
+        <video class="movie-element" id="el8" src="media/vid/About Time - London Underground Scene.mp4" muted>
+        </video>
+    </div>
+
+    <!--GSAP and plugins-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!--Lenis-->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <!--VideoJS-->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
+	<script defer src="main.js"></script>
+  </body>
+</html>

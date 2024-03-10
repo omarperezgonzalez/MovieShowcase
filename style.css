@@ -1,0 +1,133 @@
+:root {
+    --white: #F7F6F6;
+    --black: #242424;
+    --primary: #551A1A;
+    --secondary: #803B3B;
+    --third: #AA6C6C;
+    
+}
+
+html.lenis{
+    height: auto;
+}
+
+body{
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.landing-page{
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 1;
+    z-index: 99;
+    background-color: var(--primary);
+}
+
+.title-container{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+    margin: auto;
+}
+
+.developed{
+    position: absolute;
+    color: var(--white);
+    font-family: "Krona One";
+    font-size: 1vw;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.landing-page h1{
+    font-family: "Rubik Mono One";
+    margin: auto;
+    text-align: center;
+    font-size: 15vw;
+}
+
+.landing-page h1:hover{
+    cursor: initial;
+}
+
+.landing-page h1:nth-child(2n+1){
+    color: var(--secondary);
+}
+
+.landing-page h1:nth-child(2n){
+    color: var(--third);
+}
+
+.navbar{
+    position: fixed;
+    background-color: #551A1A;
+    width: 10vw;
+    height: 100vh;
+
+    right: 0;
+    top: 0;
+}
+
+.navbar-icon{
+    width: 75%;
+    display: block;
+    margin: 1vh auto;
+
+    transition: 1s;
+}
+
+.navbar-icon:hover{
+    filter: invert(42%) sepia(30%) saturate(535%) hue-rotate(314deg) brightness(106%) contrast(89%);
+    transform: scale(1.1) rotate(-15deg);
+}
+
+.navbar-name{
+    display: block;
+    margin: 10vh auto;
+
+    writing-mode: vertical-rl;
+
+    font-family: "Krona One";
+    font-size: 2vh;
+
+    transition: 1s;
+
+}
+
+.navbar-name a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.navbar-name:hover{
+    filter: invert(42%) sepia(30%) saturate(535%) hue-rotate(314deg) brightness(106%) contrast(89%);
+    transform: scale(1.1);
+    color: var(--third);
+}
+
+.movie-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 85vw;
+    margin: auto 2vw;
+}
+
+.movie-element{
+    object-fit:cover;
+    min-height: 100vh;
+}
