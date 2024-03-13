@@ -179,7 +179,9 @@ const hoverAnimation = (el) => {
 //When DOM is loaded do the init function
 document.addEventListener("DOMContentLoaded", init);
 
-hoverAnimation(exitBtn);
+if(window.innerWidth > 1000){
+    hoverAnimation(exitBtn);
+}
 
 gsap.set(".details-container", {x:1500})
 
@@ -193,7 +195,10 @@ movies.forEach((movie, index) => {
         onLeaveBack: () => movie.pause(),
     });
 
-    hoverAnimation(movie);
+    
+    if(window.innerWidth > 1000){
+        hoverAnimation(movie);
+    }
 
     movie.addEventListener('click', () => {
         displayMovieDetail(index);
@@ -211,12 +216,14 @@ exitBtn.addEventListener('click', () => {
     lenis.start();
 })
 
-//Custom Cursor Function
-document.body.addEventListener('mousemove', e => {
+if(window.innerWidth > 1000){
+    //Custom Cursor Function
+    document.body.addEventListener('mousemove', e => {
     cursor.setAttribute("style", "top: "+(e.clientY - 10)+"px; left: "+(e.clientX - 10)+"px;")
 })
+}
 
 //Scroll to top on reload
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
+}

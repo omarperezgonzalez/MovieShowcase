@@ -271,3 +271,107 @@ body::-webkit-scrollbar{
     font-size: 1vw;
     color: var(--third);
 }
+
+@media(max-width: 600px){
+    .navbar{
+        width: 100vw;
+        height: 10vh;
+    }
+    
+    .navbar-icon{
+        width: 15%;
+
+        margin: auto;
+        position: absolute;
+        left: 15%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .navbar-name{
+        writing-mode: initial;
+        width: 35%;
+    
+        font-family: "Krona One";
+        font-size: 10px;
+        text-align: center;
+    
+        transition: 1s;
+
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        transform: translate(-100%, -225%);
+    }
+    
+    .details-exit{
+        position: absolute;
+
+        right: 5%;
+        top: 10%;
+    }
+
+    .details-container{
+        height: 100vh;
+        width: 100vw;
+
+        bottom: 0;
+        z-index: 50;
+        flex-direction: column;
+    }
+
+    .details-poster{
+        height: 65vh;
+    }
+
+    .details-information{
+        width: 70vw;
+        margin: auto;
+    }
+
+    .movie-container{
+        width: 95vw;
+        margin: auto;
+    }
+
+    .navbar-name:hover{
+        filter: none;
+        transform: none;
+    }
+
+    .cursor{
+        display: none;
+    }
+
+    .developed{
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .title-container{
+        position: absolute;
+    
+        margin: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .details-information h1{
+        font-size: 8vw;
+    }
+    
+    .details-information h2{
+        font-size: 4vw;
+    }
+    
+    .details-information p{
+        font-size: 3vw;
+    }
+
+    .landing-page h1{
+        font-size: 20vw;
+    }
+
+}
