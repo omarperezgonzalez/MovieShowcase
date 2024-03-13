@@ -11,7 +11,76 @@ html.lenis{
     height: auto;
 }
 
+.cursor {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    
+    background-color: var(--secondary);
+    filter:opacity(.5);
+    border-radius: 100px;
+
+    top: 40px;
+    left: 40px;
+    z-index: 100;
+    transition: .15s linear;
+    pointer-events: none;
+}
+
+.cursor--hover{
+    height: 130px !important;
+    width: 130px !important;
+}
+
+.int--hover{
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.int{
+    height: 7.5px;
+    width: 7.5px;
+
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    transition: 1s;
+    
+    background-color: var(--black);
+    opacity: 1;
+    border-radius: 100px;
+}
+
+.cursor--click{
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    transition: 1s;
+    
+    color: var(--white);
+    font-family: "Rubik Mono One";
+    font-size: 0vh;
+
+    opacity: 0;
+    border-radius: 100px;
+}
+
+.cursor--click--hover{
+    opacity: 1;
+    font-size: 2vh;
+}
+
 body{
+    cursor: none;
+    overflow: hidden;
     background-color: var(--black);
 }
 
@@ -23,7 +92,7 @@ body::-webkit-scrollbar{
     width: 100vw;
     height: 100vh;
 
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
 
@@ -59,10 +128,6 @@ body::-webkit-scrollbar{
     font-size: 15vw;
 }
 
-.landing-page h1:hover{
-    cursor: initial;
-}
-
 .landing-page h1:nth-child(2n+1){
     color: var(--secondary);
 }
@@ -79,6 +144,7 @@ body::-webkit-scrollbar{
 
     right: 0;
     top: 0;
+    z-index: 99;
 }
 
 .navbar-icon{
@@ -92,6 +158,7 @@ body::-webkit-scrollbar{
 .navbar-icon:hover{
     filter: invert(42%) sepia(30%) saturate(535%) hue-rotate(314deg) brightness(106%) contrast(89%);
     transform: scale(1.1) rotate(-15deg);
+    cursor: none;
 }
 
 .navbar-name{
@@ -110,6 +177,7 @@ body::-webkit-scrollbar{
 .navbar-name a{
     text-decoration: none;
     color: var(--secondary);
+    cursor: none;
 }
 
 .navbar-name:hover{
@@ -130,4 +198,76 @@ body::-webkit-scrollbar{
 .movie-element{
     object-fit:cover;
     min-height: 100vh;
+}
+
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    /* you can control opacity of noise  */
+    opacity: .025;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(/media/img/noise.gif) ;
+}
+
+.details-exit{
+    text-align: center;
+
+    font-family: "Krona One";
+    color: var(--third);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.details-container{
+    height: 100vh;
+    width: 90vw;
+    background-color: var(--black);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+
+    display: flex;
+    flex-direction: row;
+
+    opacity: 1;
+}
+
+.details-poster{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/media/img/about-time.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.details-information{
+    margin: 10vh 5vw;
+}
+
+.details-information h1{
+    font-family: "Rubik Mono One";
+
+    font-size: 4vw;
+    color: var(--primary);
+}
+
+.details-information h2{
+    font-family: "Krona One";
+
+    font-size: 3vw;
+    color: var(--secondary);
+}
+
+.details-information p{
+    font-family: "Krona One";
+
+    font-size: 1vw;
+    color: var(--third);
 }
