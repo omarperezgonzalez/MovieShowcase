@@ -241,14 +241,14 @@ body::-webkit-scrollbar{
 
 .details-poster{
     height: 100vh;
-    width: 100vw;
+    min-width: 40vw;
     background-image: url(/media/img/about-time.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .details-information{
-    margin: 10vh 5vw;
+    margin: auto 5vw;
 }
 
 .details-information h1{
