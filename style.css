@@ -138,7 +138,7 @@ body::-webkit-scrollbar{
 
 .navbar{
     position: fixed;
-    background-color: #551A1A;
+    background-color: var(--black);
     width: 10vw;
     height: 100vh;
 
